@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Dashboard — Première version du tableau de bord React + MUI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Create React App](https://img.shields.io/badge/Create_React_App-5-09D3AC?logo=createreactapp&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-5-007FFF?logo=mui&logoColor=white)
 
-## Available Scripts
+📦 **Code source** : <https://github.com/Georginio-prod/Dashboard>
+✅ **Version complète** : [react](https://github.com/Georginio-prod/react)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Présentation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Première itération (octobre 2023) du tableau de bord d'administration React / Material UI.
+Cette version pose la structure (thème, sidebar, topbar, routing) et implémente les trois
+premières pages ; la version finale avec tous les graphiques se trouve dans le dépôt
+[react](https://github.com/Georginio-prod/react).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Ce qui est implémenté
 
-### `npm test`
+- Thème clair / sombre par contexte (`theme.js`).
+- `Sidebar` (react-pro-sidebar) et `Topbar` (recherche, bascule de thème, icônes).
+- Pages **Dashboard**, **Team** et **Contacts** (DataGrid MUI sur `mockData.js`).
+- Les routes Invoices, Form, Calendar, FAQ, Bar, Pie, Line sont préparées mais commentées.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Structure
 
-### `npm run build`
+```
+Dashboard/
+├── react-admin-dashboard/     # Copie de référence du tutoriel
+└── src/
+    ├── App.js · theme.js
+    ├── components/Header.jsx
+    ├── data/                  # mockData.js, mockGeoFeatures.js
+    └── scenes/                # global/ (Sidebar, Topbar), dashboard/, team/, contacts/
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Installation & lancement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Prérequis : Node.js (≥ 16 ; avec Node ≥ 17, ajouter `NODE_OPTIONS=--openssl-legacy-provider` si le build échoue).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/Georginio-prod/Dashboard.git
+cd Dashboard
+npm install
+npm start          # http://localhost:3000
+```
 
-### `npm run eject`
+| Commande | Description |
+|---|---|
+| `npm start` | Serveur de développement |
+| `npm run build` | Build de production dans `build/` |
+| `npm test` | Tests (Jest + Testing Library) |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌐 Déploiement
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Non déployé (version intermédiaire remplacée par [react](https://github.com/Georginio-prod/react)).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 👤 Auteur
 
-## Learn More
+**Komla Etonam Georges EKLOU** (Georginio) — Développeur Full Stack Web & Web3
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[![GitHub](https://img.shields.io/badge/GitHub-Georginio--prod-181717?logo=github)](https://github.com/Georginio-prod)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profil-0A66C2?logo=linkedin)](https://www.linkedin.com/in/komla-etonam-georges-eklou-68518b23b)
+[![Portfolio](https://img.shields.io/badge/Portfolio-georginio.w3frame.com-6C63FF)](https://georginio.w3frame.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> 📚 Tous mes projets sont listés et documentés sur mon [profil GitHub](https://github.com/Georginio-prod).
